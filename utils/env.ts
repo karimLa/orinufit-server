@@ -42,3 +42,23 @@ export function getCloudinarySecret() {
 	const env = process.env.CLOUDINARY_SECRET
 	return checkEnv(env, 'CLOUDINARY_SECRET')
 }
+
+export function getMailHost() {
+	const env = process.env.MAIL_HOST
+	return checkEnv(env, 'MAIL_HOST')
+}
+
+export function getMailPort() {
+	const env = process.env.MAIL_PORT
+	return checkEnv(env, 'MAIL_PORT')
+}
+
+export function getMailUser() {
+	const env = process.env.MAIL_USER
+	return checkEnv(env, 'MAIL_USER')
+}
+
+export function getMailKey() {
+	const env = process.env.MAIL_PASS
+	return checkEnv(env, 'MAIL_PASS')
+}
