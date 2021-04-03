@@ -34,7 +34,7 @@ export const Product = list({
 	},
 	ui: {
 		listView: {
-			initialColumns: ['name', 'status']
+			initialColumns: ['name', 'status', 'price']
 		}
 	}
 })
