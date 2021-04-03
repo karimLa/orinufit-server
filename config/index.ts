@@ -3,6 +3,7 @@ import { statelessSessions, withItemData } from '@keystone-next/keystone/session
 
 import { getDB, getSecret, getWebUrl } from '../utils/env';
 import lists from '../schemas'
+import extendGraphqlSchema from '../mutations'
 import { insertSeedData } from '../seed';
 
 const keystoneConfig: KeystoneConfig = {
@@ -26,6 +27,7 @@ const keystoneConfig: KeystoneConfig = {
 	},
 	// @ts-ignore
 	lists,
+	extendGraphqlSchema,
 	// @ts-ignore
 	session: withItemData(
 		statelessSessions({
