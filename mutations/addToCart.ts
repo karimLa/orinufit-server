@@ -19,7 +19,7 @@ const addToCart: GraphQLResolver = async (_, { productId }: Args, ctx): Promise<
 			user: { id: sesh.itemId },
 			product: { id: productId }
 		},
-		resolveFields: 'id,quantity'
+		resolveFields: `id quantity`
 	})
 
 	const [existingCartItem] = cartItems

@@ -62,3 +62,8 @@ export function getMailKey() {
 	const env = process.env.MAIL_PASS
 	return checkEnv(env, 'MAIL_PASS')
 }
+
+export function getStripeKey() {
+	const env = process.env.STRIPE_SECRET
+	return checkEnv(env, 'STRIPE_SECRET')
+}
