@@ -3,6 +3,7 @@ import { statelessSessions, withItemData } from '@keystone-next/keystone/session
 
 import { getDB, getSecret, getWebUrl } from '../utils/env';
 import lists from '../schemas'
+import { permissionsList } from '../schemas/fields';
 import extendGraphqlSchema from '../mutations'
 import { insertSeedData } from '../seed';
 
@@ -34,7 +35,7 @@ const keystoneConfig: KeystoneConfig = {
 			maxAge: 60 * 60 * 24 * 30, // 30 days
 			secret: getSecret(),
 		}),
-		{ User: 'name email' }
+		{ User: `name email role { ${permissionsList.join(' ')} }` }
 	)
 }
 
