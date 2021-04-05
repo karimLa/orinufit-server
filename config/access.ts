@@ -26,8 +26,6 @@ export const rules = {
 		return { user: { id: ctx.session.itemId } }
 	},
 	canReadProducts(ctx: KeystoneContext) {
-		if (!isSignedIn(ctx)) return false
-
 		if (permissions.canManageProducts(ctx)) return true
 
 		return { status: 'AVAILABLE' }
