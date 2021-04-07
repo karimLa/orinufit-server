@@ -25,7 +25,8 @@ export function getSecret() {
 
 export function getWebUrl() {
 	const env = process.env.WEB_URL
-	return checkEnv(env, 'WEB_URL')
+	const webUrl = checkEnv(env, 'WEB_URL')
+	return webUrl.split(' ')
 }
 
 export function getCloudinaryCloudName() {

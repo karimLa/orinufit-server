@@ -10,7 +10,7 @@ import { insertSeedData } from '../seed';
 const keystoneConfig: KeystoneConfig = {
 	server: {
 		cors: {
-			origin: [getWebUrl()],
+			origin: getWebUrl(),
 			credentials: true
 		}
 	},
